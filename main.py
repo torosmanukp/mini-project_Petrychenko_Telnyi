@@ -5,7 +5,6 @@ from scipy import ndimage
 
 def natural_terrain_exp(x, y, num_hills=30, amplitude=1):
     Z = np.zeros_like(x)
-    print(Z)
     for _ in range(num_hills):
         x0 = np.random.uniform(x.min(), x.max())
         y0 = np.random.uniform(y.min(), y.max())
@@ -17,7 +16,6 @@ def natural_terrain_exp(x, y, num_hills=30, amplitude=1):
     return Z
 
 x = np.linspace(-20, 20, 100)
-print(x)
 y = np.linspace(-20, 20, 100    )
 X, Y = np.meshgrid(x, y)
 Z = natural_terrain_exp(X, Y)
